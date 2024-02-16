@@ -29,8 +29,8 @@ namespace testGithubRunner.Controllers
             })
             .ToArray();
         }
-        [HttpGet(Name = "GetWeatherForecast1")]
-        public IEnumerable<WeatherForecast> Get1()
+        [HttpGet(Name = "GetWeatherForecast133")]
+        public IEnumerable<WeatherForecast> Get3121()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
