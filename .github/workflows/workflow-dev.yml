@@ -1,4 +1,4 @@
-name: my-workflow  # Name of your workflow
+name: workflow-dev  # Name of your workflow
 
 on:  # Triggers the workflow
   push:  # On pushes to branches
