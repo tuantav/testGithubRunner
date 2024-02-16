@@ -1,11 +1,11 @@
 name: my-workflow  # Name of your workflow
 
 on:  # Triggers the workflow
-  push:  # On pushes to branches
-    branches: [ main ] 
-  pull_request:  # On pull requests
-    branches: [ main ]
-
+  #push:  # On pushes to branches
+    #branches: [ main ] 
+  #pull_request:  # On pull requests
+    #branches: [ main ]
+  workflow_dispatch:
 jobs:
   build:  # Name of the job
 
