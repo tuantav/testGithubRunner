@@ -2,7 +2,7 @@ name: my-workflow  # Name of your workflow
 
 on:  # Triggers the workflow
   push:  # On pushes to branches
-    branches: [ task/EPS ] 
+    branches: [ master ] 
   pull_request:  # On pull requests
     branches: [ master ]
   # workflow_dispatch:
