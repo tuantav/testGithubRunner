@@ -3,10 +3,10 @@ name: workflow-dev
 on:
   push:
     branches:
-      - task/EPS-test-Github-Runner
+      - task/EPS-test-Runner
   pull_request:
     branches:
-      - task/EPS-test-Github-Runner
+      - task/EPS-test-Runner
 
 jobs:
   build:
@@ -20,10 +20,10 @@ jobs:
         run: echo Hello  # Replace with your specific test command
 
       - name: Set environment variables
-        run: chmod +x ./.github/workflows/env.sh && ./.github/workflows/env.sh
-        env:
-          AZURE_APIKEY: ${{secrets.AZURE_APIKEY}}
+        run: |
+          chmod +x ./.github/workflows/env.sh
+          ./.github/workflows/env.sh  # Run the script to set environment variables
         shell: bash
 
-      - name: Display Updated appsettings.json
-        run: cat ./appsettings.json
+      - name: Display Updated test.json
+        run: cat ./test.json
