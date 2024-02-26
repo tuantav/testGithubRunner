@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function replace_values() {
-  local file_url=$1
+  local file_url="/path/to/appsettings.json"  # Replace with the actual path
   # replace value
 
   sed -i "s|\"ApiKey\": \".*\"|\"ApiKey\": \"${AZURE_APIKEY}\"|g" "$file_url"
@@ -11,4 +11,4 @@ function replace_values() {
   cat "$file_url"
 }
 
-replace_values ./appsettings.json
+replace_values
