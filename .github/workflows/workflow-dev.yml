@@ -1,19 +1,30 @@
-name: workflow-dev  # Name of your workflow
+name: workflow-dev
 
-on:  # Triggers the workflow
-  push:  # On pushes to branches
-    branches: [ task/EPS-test-Github-Runner ] 
-  pull_request:  # On pull requests
-    branches: [ task/EPS-test-Github-Runner ]
-  # workflow_dispatch:
+on:
+  push:
+    branches:
+      - task/EPS-test-Github-Runner
+  pull_request:
+    branches:
+      - task/EPS-test-Github-Runner
+
 jobs:
-  build:  # Name of the job
+  build:
+    runs-on:
+      - self-hosted
+      - label-1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    runs-on: 
-    - self-hosted  # The type of GitHub-hosted runner
-    - label-1
-    steps:  # Steps within the job
-      - uses: actions/checkout@v3  # Checks out your repository
       - name: Run tests
-        run:
-          echo Hello  # Replace with your specific test command
+        run: echo Hello  # Replace with your specific test command
+
+      - name: Set environment variables
+        run: chmod +x ./.github/workflows/env.sh && ./.github/workflows/env.sh
+        env:
+          AZURE_APIKEY: ${{secrets.AZURE_APIKEY}}
+        shell: bash
+
+      - name: Display Updated appsettings.json
+        run: cat ./appsettings.json
