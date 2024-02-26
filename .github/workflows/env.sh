@@ -4,7 +4,7 @@ function replace_values() {
   local file_url=$1
   # replace value
 
-  sed -i "s|\"ApiKey\": \".*\"|\"ApiKey\": \"${{ env.AZURE_APIKEY }}\"|g" "$file_url"
+  sed -i "s|\"ApiKey\": \".*\"|\"ApiKey\": \"${AZURE_APIKEY}\"|g" "$file_url"
 
   echo $AZURE_APIKEY | sed 's/./& /g'
 
@@ -12,4 +12,3 @@ function replace_values() {
 }
 
 replace_values ./appsettings.json
-
