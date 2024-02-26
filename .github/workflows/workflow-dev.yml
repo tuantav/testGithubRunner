@@ -12,7 +12,6 @@ jobs:
   build:
     runs-on:
       - self-hosted
-      - label-1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
