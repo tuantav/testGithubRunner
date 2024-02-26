@@ -25,5 +25,5 @@ jobs:
           ./.github/workflows/env.sh  # Run the script to set environment variables
         shell: bash
 
-      - name: Display Updated appsettings.json
-        run: cat ./appsettings.json
+      - name: Display Updated test.json
+        run: cat ./test.json
