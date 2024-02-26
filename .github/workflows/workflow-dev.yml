@@ -3,10 +3,10 @@ name: workflow-dev
 on:
   push:
     branches:
-      - task/EPS-test-Github-Runner
+      - task/EPS-test-Runner
   pull_request:
     branches:
-      - task/EPS-test-Github-Runner
+      - task/EPS-test-Runner
 
 jobs:
   build:
