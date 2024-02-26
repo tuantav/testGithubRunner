@@ -1,4 +1,4 @@
-name: workflow-dev-2
+name: workflow-dev
 
 on:
   push:
