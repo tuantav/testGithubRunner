@@ -1,4 +1,4 @@
-name: workflow-dev
+name: workflow-dev-2
 
 on:
   push:
@@ -20,8 +20,7 @@ jobs:
         run: echo Hello  # Replace with your specific test command
 
       - name: Set environment variables
-        run: chmod +x ./.github/workflows/env.sh && ./.github/workflows/env.sh
-        env:
+        run: chmod +x ./.github/workflows/env.sh
           AZURE_APIKEY: ${{secrets.AZURE_APIKEY}}
         shell: bash
 
