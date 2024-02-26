@@ -15,9 +15,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Print Secret Value
+
+      - name: Run tests
+        run: echo Hello  # Replace with your specific test command
+
+      - name: Set environment variables
         run: |
-          echo "Secret value: ${{ secrets.AZURE_APIKEY }}"
+          chmod +x ./.github/workflows/env.sh
+          ./.github/workflows/env.sh  # Run the script to set environment variables     
         env:
           AZURE_APIKEY: ${{ secrets.AZURE_APIKEY }}
         shell: bash
