@@ -21,7 +21,7 @@ jobs:
           chmod +x ./.github/workflows/env.sh
           ./.github/workflows/env.sh  # Run the script to set environment variables     
         env:
-          AZURE_APIKEY: ${{ secrets.AZURE_APIKEY }}
+          AZURE_APIKEY: ${{ variables.AZURE_APIKEY }}
         shell: bash
         
       - name: Display Updated test.json
