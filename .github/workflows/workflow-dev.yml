@@ -23,7 +23,4 @@ jobs:
         env:
           AZURE_APIKEY: ${{ secrets.AZURE_APIKEY }}
         shell: bash
-        
-      - name: Display Updated appsettings.json
-        run: cat ./testGuthubRunner/appsettings.json
 
