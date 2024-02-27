@@ -24,6 +24,6 @@ jobs:
           AZURE_APIKEY: ${{ secrets.AZURE_APIKEY }}
         shell: bash
         
-      - name: Display Updated test.json
-        run: cat ./test.json
+      - name: Display Updated appsettings.json
+        run: cat ./testGuthubRunner/appsettings.json
 
