@@ -11,4 +11,4 @@ function replace_values() {
   cat "$file_url"
 }
 
-replace_values ./test.json
+replace_values ./testGithubRunner/appsettings.json
